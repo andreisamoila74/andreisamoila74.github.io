@@ -1,0 +1,1 @@
+openssl x509 -noout -modulus -in signing.pem | cut -c 9- | xxd -r -p | base64 | tr '/+' '_-' | tr -d '='
